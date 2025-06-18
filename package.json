@@ -4,8 +4,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
-    "build": "tsc && npm run copy:views && ls -R dist/views",
-    "copy:views": "copyfiles -u 1 src/views/**/* dist",
+    "build": "tsc && npm run copy:views && tree dist/views",
+    "copy:views": "cpx \"src/views/**/*\" dist/views",
     "start": "node dist/index.js"
   },
   "keywords": [],
@@ -27,6 +27,7 @@
     "@types/express-handlebars": "^5.3.1",
     "@types/node": "^22.15.28",
     "copyfiles": "^2.4.1",
+    "cpx": "^1.5.0",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.8.3"
   }
