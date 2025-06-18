@@ -7,7 +7,9 @@ services:
     startCommand: npm start
     autoDeploy: true
     envVars:
-      - key: NODE_ENV
-        value: production
+      - key: PROD
+        value: true
+      - key: SQLITE_PATH
+        value: /data/data.db
       - key: PORT
-        value: 10000
+        value: 1000
