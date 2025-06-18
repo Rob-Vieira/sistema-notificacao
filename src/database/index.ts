@@ -5,7 +5,7 @@ import { tables } from "./tables";
 
 const dbPath = path.join(__dirname, "../data/database.db");
 
-const db = new Database(dbPath);
+const db = new Database('/tmp/dev.db');
 
 function setupBD(){
     tables.forEach((table) => db.prepare(table).run());
