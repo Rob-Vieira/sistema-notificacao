@@ -11,7 +11,7 @@ dist/
 # .env
 
 # SQLite database (local)
-*.db
+# *.db
 
 # Logs
 logs/
