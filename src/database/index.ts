@@ -3,7 +3,7 @@ import path from "path";
 
 import { tables } from "./tables";
 
-const dbPath = process.env.SQLITE_PATH || path.join(__dirname, "../data/database.db");
+const dbPath = path.join(__dirname, "../data/database.db");
 const db = new Database(dbPath);
 
 function setupBD(){
