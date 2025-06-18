@@ -1,0 +1,27 @@
+# Node modules
+node_modules/
+
+# Build
+dist/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Environment variables
+# .env
+
+# SQLite database (local)
+*.db
+
+# Logs
+logs/
+*.log
+
+# VSCode
+.vscode/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+src/config/firebase/serviceAccountKey.json

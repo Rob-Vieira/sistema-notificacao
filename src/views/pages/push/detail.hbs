@@ -1,0 +1,29 @@
+<div>
+    <h3>{{ customer.name }}</h3>
+    <ul>
+        <li>CPF: {{ customer.cpf }}</li>
+    </ul>
+</div>
+<table style="width: 100%; text-align:center;">
+    <thead>
+        <th style="border: 1px solid">Token</th>
+        <th style="border: 1px solid">Último envio</th>
+        <th style="border: 1px solid"></th>
+    </thead>
+    <tbody>
+        {{#each devices}}
+            <tr>
+                <td style="padding: 16px;border: 1px solid">
+                    <small>{{ this.token }}</small>
+                </td>
+                <td style="padding: 16px;border: 1px solid">
+                    <small>{{ this.last_success }}</small>
+                </td>
+                <td style="padding: 16px;border: 1px solid">
+                    <button>Excluir token</button>
+                    <a href="{{ @root.urlAdmin }}/push/send/{{ @root.customer.id }}" >Enviar notificação</a>
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>

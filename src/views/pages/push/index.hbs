@@ -1,0 +1,22 @@
+<table style="width: 100%; text-align:center;">
+    <thead>
+        <th style="border: 1px solid">#</th>
+        <th style="border: 1px solid">Nome</th>
+        <th style="border: 1px solid">CPF</th>
+        <th style="border: 1px solid">Quantidade de tokens</th>
+    </thead>
+    <tbody>
+        {{#each customers}}
+            <tr>
+                <td style="padding: 16px;border: 1px solid">{{ this.id }}</td>
+                <td style="padding: 16px;border: 1px solid">
+                    <a href="{{ @root.urlAdmin }}/push/detail/{{ this.id }}">
+                        {{ this.name }}
+                    </a>
+                </td>
+                <td style="padding: 16px;border: 1px solid">{{ this.cpf }}</td>
+                <td style="padding: 16px;border: 1px solid">{{ this.devices }}</td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
